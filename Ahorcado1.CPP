@@ -6,7 +6,7 @@
 #include <ctype.h>
 #include <dos.h>
 
-#define ABC 26 //Constante que controla la impresi�n del abecedario
+#define ABC 26 //Constante que controla la impresion del abecedario
 
 //VARIABLES GLOBALES
 
