@@ -4,10 +4,9 @@
 #include <stdio.h>
 #include <conio.h>
 #include <ctype.h>
-#include <11-4.h>
 #include <dos.h>
 
-#define ABC 26 //Constante que controla la impresión del abecedario
+#define ABC 26 //Constante que controla la impresiï¿½n del abecedario
 
 //VARIABLES GLOBALES
 
@@ -22,16 +21,16 @@ char letra;
 char palabras[30][20]; //Matriz que almacena todas las palabras
 char palabra[20]; //Vector que controla el almacenamiento de la palabra introducida por el usuario
 char respuesta[20]; //Vector que controla la cantidad de letras que el usuario puede digitar segun la palabra
-int partidas[] = {0}; //Vector que controla el número de partidas jugadas
-int derrotas[] = {0}; //Vector que controla el número de derrotas
-int victoria[] = {0}; //Vector que controla el número de derrotas
+int partidas[] = {0}; //Vector que controla el nï¿½mero de partidas jugadas
+int derrotas[] = {0}; //Vector que controla el nï¿½mero de derrotas
+int victoria[] = {0}; //Vector que controla el nï¿½mero de derrotas
 int letras[] = {0}; //Vector que guarda la cantidad de letras digitadas
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //FUNCIONES
 
-//Función que determina el número de derrotas que ha tenido el jugador
+//Funciï¿½n que determina el nï¿½mero de derrotas que ha tenido el jugador
 
 int itsover(int d[])
 {
@@ -43,7 +42,7 @@ int itsover(int d[])
    return d[derr]; //Se retorna el resultado de acumulado por el vector
 }
 
-//Función que determina el número de vicorias que ha tenido el jugador
+//Funciï¿½n que determina el nï¿½mero de vicorias que ha tenido el jugador
 
 int victorias(int v[])
 {
@@ -53,11 +52,11 @@ int victorias(int v[])
    	v[victory] += 1; //Se acumula las derrotas dentro del vector
    }
    return v[victory] - 1; //Se retorna el resultado de acumulado por el vector - 1 ya que cuando se inicia el programa siempre los intentos
-   						     //serán menores que 20 por lo que se acumulará un "1" indeseable para la cuenta desde el principio y al retarle 1
-                          //se nivela la estadística en 0 desde el inicio.
+   						     //serï¿½n menores que 20 por lo que se acumularï¿½ un "1" indeseable para la cuenta desde el principio y al retarle 1
+                          //se nivela la estadï¿½stica en 0 desde el inicio.
 }
 
-//Función que determina el número de letras digitadas
+//Funciï¿½n que determina el nï¿½mero de letras digitadas
 
 int partida(int p[])
 {
@@ -69,7 +68,7 @@ int partida(int p[])
    return p[sumapartidas];
 }
 
-//Función que determina el promedio de victorias del jugador
+//Funciï¿½n que determina el promedio de victorias del jugador
 
 float promvictorias(int v[], int p[])
 {
@@ -83,7 +82,7 @@ float promvictorias(int v[], int p[])
    return promvic;
 }
 
-//Función que determina el promedio de derrotas del jugador
+//Funciï¿½n que determina el promedio de derrotas del jugador
 
 float promderrotas(int d[], int p[])
 {
@@ -105,29 +104,29 @@ float promderrotas(int d[], int p[])
 
 void cuadroprincipal()
 {
-   horizontal(18,50,6); // Invocación de función para dibujar lineas horizontales #1
-	horizontal(18,50,26); // Invocación de función para dibujar lineas horizontales #2
-   vertical(7,25,18); // Invocación de función para dibujar lineas verticales #1
-   vertical(7,25,50); // Invocación de función para dibujar lineas verticales #2
-   esquina(18,6,201); // Invocación de función para dibujar esquina #1
-   esquina(18,26,200); // Invocación de función para dibujar esquina #2
-   esquina(50,6,187); // Invocación de función para dibujar esquina #3
-   esquina(50,26,188); // Invocación de función para dibujar esquina #4
+   horizontal(18,50,6); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #1
+	horizontal(18,50,26); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #2
+   vertical(7,25,18); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #1
+   vertical(7,25,50); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #2
+   esquina(18,6,201); // Invocaciï¿½n de funciï¿½n para dibujar esquina #1
+   esquina(18,26,200); // Invocaciï¿½n de funciï¿½n para dibujar esquina #2
+   esquina(50,6,187); // Invocaciï¿½n de funciï¿½n para dibujar esquina #3
+   esquina(50,26,188); // Invocaciï¿½n de funciï¿½n para dibujar esquina #4
 }
 
 //Procedimiento que crea una interfaz para jugar
 
 void cuadro()
 {
-   horizontal(2,78,3); // Invocación de función para dibujar lineas horizontales #1
-   horizontal(2,78,7); // Invocación de función para dibujar lineas horizontales #2
-	horizontal(2,78,30); // Invocación de función para dibujar lineas horizontales #3
-   vertical(4,29,2); // Invocación de función para dibujar lineas verticales #1
-   vertical(4,29,78); // Invocación de función para dibujar lineas verticales #2
-   esquina(2,3,201); // Invocación de función para dibujar esquina #1
-   esquina(2,30,200); // Invocación de función para dibujar esquina #2
-   esquina(78,3,187); // Invocación de función para dibujar esquina #3
-   esquina(78,30,188); // Invocación de función para dibujar esquina #4
+   horizontal(2,78,3); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #1
+   horizontal(2,78,7); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #2
+	horizontal(2,78,30); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #3
+   vertical(4,29,2); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #1
+   vertical(4,29,78); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #2
+   esquina(2,3,201); // Invocaciï¿½n de funciï¿½n para dibujar esquina #1
+   esquina(2,30,200); // Invocaciï¿½n de funciï¿½n para dibujar esquina #2
+   esquina(78,3,187); // Invocaciï¿½n de funciï¿½n para dibujar esquina #3
+   esquina(78,30,188); // Invocaciï¿½n de funciï¿½n para dibujar esquina #4
 }
 
 //Lista predeterminada de palabras que se copian y guardan dentro de la matriz
@@ -166,7 +165,7 @@ void determinapalabras()
    strcpy(palabras[29],"TIGRES");
 }
 
-//Procedimiento que imprime los títulos del juego
+//Procedimiento que imprime los tï¿½tulos del juego
 
 void imprimetitulos()
 {
@@ -187,13 +186,13 @@ void generapalabras()
 {
 	srand(time(0)); //Permite que cada vez que juguemos no se repita la misma palabra
    randomize();
-   j = (rand()%30); //Genera una opción entre 0 y 28 que es el numero de campos que posee la matriz
-	strcpy(palabra,palabras[j]); //Copia lo encontrado aleatoriamente en la matriz, por lo que hace alución a un campo específico de la misma
+   j = (rand()%30); //Genera una opciï¿½n entre 0 y 28 que es el numero de campos que posee la matriz
+	strcpy(palabra,palabras[j]); //Copia lo encontrado aleatoriamente en la matriz, por lo que hace aluciï¿½n a un campo especï¿½fico de la misma
    largo = strlen(palabra); // "strlen" mide el largo o la longitud de la palabra
    for(int i = 1; i <= largo;i++) //Ciclo que imprime las rayitas
    {
    	gotoxy(15 + i * 4,19); // El "i * 4" determina el numero de espacios que hay entre cada rayita
-      putchar(95); //Imprime el caracter 95 del código ASCII que sería la barra baja
+      putchar(95); //Imprime el caracter 95 del cï¿½digo ASCII que serï¿½a la barra baja
    }
 }
 
@@ -203,8 +202,8 @@ void digitapalabra()
 {
 	do //Ciclo para que solo se pueda leer letras
    {
-   	letra = toupper(getch()); //Si el usuario digita una letra en minúscula el "toupper" la transforma en mayúscula
-   }while(!isalpha(letra)); // "!isalpha(letra)" solo dejará introducir letras, no permitirá introducir otros caracteres
+   	letra = toupper(getch()); //Si el usuario digita una letra en minï¿½scula el "toupper" la transforma en mayï¿½scula
+   }while(!isalpha(letra)); // "!isalpha(letra)" solo dejarï¿½ introducir letras, no permitirï¿½ introducir otros caracteres
    gotoxy(15,22);	printf("Letras digitadas: ");
    gotoxy(intento + 35,22);	printf("%c",letra);
    gotoxy(15,16); printf("Intento #%d de 20",intento + 1);
@@ -222,7 +221,7 @@ void comparapalabra()
          respuesta[i] = letra; //Se guarda la letra digitada en el vector "respuesta"
       }
       compara = strcmp(palabra,respuesta); // strcmp compara el caracter introducido con el caracter generado a leatoriamente
-      //strcmp arroja dos tipos de resultado según si se ha encontrado el caracter digitado en el vector "palabra":
+      //strcmp arroja dos tipos de resultado segï¿½n si se ha encontrado el caracter digitado en el vector "palabra":
       //0 = la letra si se encontro en el vector (resultado positivo)
       //1 = la letra no se encontro en el vector (resultado negativo)
       if(compara == 0) //Condicional si compara es positivo
@@ -254,7 +253,7 @@ void gameover()
 void ahorcado()
 {
 		clrscr();
-      intento = 0; //Inicializa la variable intento en 0 para que cada vez que el usuario entre en la opción 2 el número de intentos se reinicie
+      intento = 0; //Inicializa la variable intento en 0 para que cada vez que el usuario entre en la opciï¿½n 2 el nï¿½mero de intentos se reinicie
       system("Color 1F"); //Color azul y texto blanco
       cuadro();
       determinapalabras();
@@ -270,23 +269,23 @@ void ahorcado()
    	getch();
 }
 
-//Proceso de estadísticas
+//Proceso de estadï¿½sticas
 
 void estadisticas()
 {
 	clrscr();
    system("Color 1F"); //Color azul y texto blanco
-   horizontal(10,70,3); // Invocación de función para dibujar lineas horizontales #1
-   horizontal(10,70,7); // Invocación de función para dibujar lineas horizontales #2
-	horizontal(10,70,40); // Invocación de función para dibujar lineas horizontales #3
-   vertical(4,39,10); // Invocación de función para dibujar lineas verticales #1
-   vertical(4,39,70); // Invocación de función para dibujar lineas verticales #3
-   esquina(10,3,201); // Invocación de función para dibujar esquina #1
-   esquina(10,40,200); // Invocación de función para dibujar esquina #2
-   esquina(70,3,187); // Invocación de función para dibujar esquina #3
-   esquina(70,40,188); // Invocación de función para dibujar esquina #4
-   esquina(70,7,185); // Invocación de función para dibujar esquina #5
-   esquina(10,7,204); // Invocación de función para dibujar esquina #6
+   horizontal(10,70,3); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #1
+   horizontal(10,70,7); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #2
+	horizontal(10,70,40); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #3
+   vertical(4,39,10); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #1
+   vertical(4,39,70); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #3
+   esquina(10,3,201); // Invocaciï¿½n de funciï¿½n para dibujar esquina #1
+   esquina(10,40,200); // Invocaciï¿½n de funciï¿½n para dibujar esquina #2
+   esquina(70,3,187); // Invocaciï¿½n de funciï¿½n para dibujar esquina #3
+   esquina(70,40,188); // Invocaciï¿½n de funciï¿½n para dibujar esquina #4
+   esquina(70,7,185); // Invocaciï¿½n de funciï¿½n para dibujar esquina #5
+   esquina(10,7,204); // Invocaciï¿½n de funciï¿½n para dibujar esquina #6
 	gotoxy(33,5); 	printf("ESTADISTICAS");
    gotoxy(25,9); 	printf("Partidas Jugadas         : %d",partida(partidas));
    gotoxy(25,10); printf("Partidas Ganadas         : %d",victorias(victoria));
@@ -304,20 +303,20 @@ void palabrasadivinansa()
 {
    clrscr();
 	system("Color 1F"); //Color azul y texto blanco
-   horizontal(10,70,3); // Invocación de función para dibujar lineas horizontales #1
-   horizontal(10,70,7); // Invocación de función para dibujar lineas horizontales #2
-	horizontal(10,70,40); // Invocación de función para dibujar lineas horizontales #3
-   vertical(4,39,10); // Invocación de función para dibujar lineas verticales #1
-   vertical(8,39,39); // Invocación de función para dibujar lineas verticales #2
-   vertical(4,39,70); // Invocación de función para dibujar lineas verticales #3
-   esquina(10,3,201); // Invocación de función para dibujar esquina #1
-   esquina(10,40,200); // Invocación de función para dibujar esquina #2
-   esquina(70,3,187); // Invocación de función para dibujar esquina #3
-   esquina(70,40,188); // Invocación de función para dibujar esquina #4
-   esquina(70,7,185); // Invocación de función para dibujar esquina #5
-   esquina(10,7,204); // Invocación de función para dibujar esquina #6
-   esquina(39,40,202); // Invocación de función para dibujar esquina #7
-   esquina(39,7,203); // Invocación de función para dibujar esquina #8
+   horizontal(10,70,3); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #1
+   horizontal(10,70,7); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #2
+	horizontal(10,70,40); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #3
+   vertical(4,39,10); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #1
+   vertical(8,39,39); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #2
+   vertical(4,39,70); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #3
+   esquina(10,3,201); // Invocaciï¿½n de funciï¿½n para dibujar esquina #1
+   esquina(10,40,200); // Invocaciï¿½n de funciï¿½n para dibujar esquina #2
+   esquina(70,3,187); // Invocaciï¿½n de funciï¿½n para dibujar esquina #3
+   esquina(70,40,188); // Invocaciï¿½n de funciï¿½n para dibujar esquina #4
+   esquina(70,7,185); // Invocaciï¿½n de funciï¿½n para dibujar esquina #5
+   esquina(10,7,204); // Invocaciï¿½n de funciï¿½n para dibujar esquina #6
+   esquina(39,40,202); // Invocaciï¿½n de funciï¿½n para dibujar esquina #7
+   esquina(39,7,203); // Invocaciï¿½n de funciï¿½n para dibujar esquina #8
 	gotoxy(33,5); 	   printf("LAS PALABRAS");
    gotoxy(14,10); 	printf("1. SAPRISSA");
    gotoxy(14,12); 	printf("2. ALAJUELENCE");
@@ -359,17 +358,17 @@ void instrucciones()
 {
    clrscr();
 	system("Color 1F"); //Color azul y texto blanco
-   horizontal(10,71,3); // Invocación de función para dibujar lineas horizontales #1
-   horizontal(10,71,7); // Invocación de función para dibujar lineas horizontales #2
-	horizontal(10,71,30); // Invocación de función para dibujar lineas horizontales #3
-   vertical(4,29,10); // Invocación de función para dibujar lineas verticales #1
-   vertical(4,29,71); // Invocación de función para dibujar lineas verticales #2
-   esquina(10,3,201); // Invocación de función para dibujar esquina #1
-   esquina(10,30,200); // Invocación de función para dibujar esquina #2
-   esquina(71,3,187); // Invocación de función para dibujar esquina #3
-   esquina(71,30,188); // Invocación de función para dibujar esquina #4
-   esquina(71,7,185); // Invocación de función para dibujar esquina #5
-   esquina(10,7,204); // Invocación de función para dibujar esquina #6
+   horizontal(10,71,3); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #1
+   horizontal(10,71,7); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #2
+	horizontal(10,71,30); // Invocaciï¿½n de funciï¿½n para dibujar lineas horizontales #3
+   vertical(4,29,10); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #1
+   vertical(4,29,71); // Invocaciï¿½n de funciï¿½n para dibujar lineas verticales #2
+   esquina(10,3,201); // Invocaciï¿½n de funciï¿½n para dibujar esquina #1
+   esquina(10,30,200); // Invocaciï¿½n de funciï¿½n para dibujar esquina #2
+   esquina(71,3,187); // Invocaciï¿½n de funciï¿½n para dibujar esquina #3
+   esquina(71,30,188); // Invocaciï¿½n de funciï¿½n para dibujar esquina #4
+   esquina(71,7,185); // Invocaciï¿½n de funciï¿½n para dibujar esquina #5
+   esquina(10,7,204); // Invocaciï¿½n de funciï¿½n para dibujar esquina #6
 
    gotoxy(35,5); 	   printf("INSTRUCCIONES");
    gotoxy(14,10); 	printf("1. El juego esta relacionado con equipos de soccer por ");
@@ -405,7 +404,7 @@ void menuprincipal()
       gotoxy(25,18);	printf("4. Lista de Palabras");
       gotoxy(25,20);	printf("5. Salir");
    	gotoxy(25,23);	printf("Opcion a procesar: ");
-      option = validarenteros(1,5,44,23); // Validación de las opciones disponibles del menu principal
+      option = validarenteros(1,5,44,23); // Validaciï¿½n de las opciones disponibles del menu principal
    	switch(option)
    	{
    		case 1:
